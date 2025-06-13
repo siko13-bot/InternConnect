@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Portal - Internship Finder</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/portal.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="logo">Company Poral</h1>
+        </header>
+
+        <!-- Portal Container -->
+        <div class="portal-container">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <h2 class="portal-title">Company Portal</h2>
+                <ul class="sidebar-nav">
+                    <li><a href="#" class="nav-item active" data-section="job-listings">Job Listings</a></li>
+                    <li><a href="#" class="nav-item" data-section="add-job">Add New Job</a></li>
+                    <li><a href="#" class="nav-item" data-section="view-applicants">View Applicants</a></li>
+                    <li><a href="index.html" class="nav-item" data-section="logout">Logout</a></li>
+                </ul>
+            </aside>
+
+            <!-- Main Area -->
+            <main class="main-area">
+                <!-- Job Listings Section -->
+                <div id="job-listings" class="section active">
+                    <div class="content-header">
+                        <h1 class="content-title">Job Listings</h1>
+                    </div>
+                    <div class="content-area">
+                        <div class="content-card">
+                            <div class="empty-state">
+                                <h3>No Job Listings</h3>
+                                <p>Create your first internship posting to attract talented applicants.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add New Job Section -->
+                <div id="add-job" class="section">
+                    <div class="content-header">
+                        <h1 class="content-title">Add New Job</h1>
+                    </div>
+                    <div class="content-area">
+                        <div class="content-card">
+                            <form id="job-form">
+                                <div class="form-group">
+                                    <label for="job-title" class="form-label">Job Title</label>
+                                    <input type="text" id="job-title" class="form-input" placeholder="e.g. Software Development Intern" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="company-name" class="form-label">Company Name</label>
+                                    <input type="text" id="company-name" class="form-input" placeholder="Your Company Name" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="job-location" class="form-label">Location</label>
+                                    <input type="text" id="job-location" class="form-input" placeholder="e.g. New York, NY" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="job-description" class="form-label">Job Description</label>
+                                    <textarea id="job-description" class="form-input form-textarea" placeholder="Describe the internship role, responsibilities, and requirements..." required></textarea>
+                                </div>
+                                
+                                <div class="action-buttons">
+                                    <button type="submit" class="btn btn-primary">Post Job</button>
+                                    <button type="reset" class="btn btn-secondary">Clear Form</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="view-applicants">
+                    <h2>View Applicants</h2>
+                    <div class="content-card">
+                        <p>No Applicants Yet</p>
+                        <p>Once you post job listings, applicant information will appear here.</p>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/portal.js"></script>
+</body>
+</html>

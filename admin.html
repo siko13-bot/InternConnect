@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Portal - Internship Finder</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/portal.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="logo">Admin Portal</h1>
+        </header>
+
+        <!-- Portal Container -->
+        <div class="portal-container">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <h2 class="portal-title">Admin Portal</h2>
+                <ul class="sidebar-nav">
+                    <li><a href="#" class="nav-item active" data-section="manage-jobs">Manage Jobs</a></li>
+                    <li><a href="#" class="nav-item" data-section="manage-applicants">Manage Applicants</a></li>
+                    <li><a href="#" class="nav-item" data-section="manage-companies">Manage Companies</a></li>
+                    <li><a href="index.html" class="nav-item" data-section="logout">Logout</a></li>
+                </ul>
+            </aside>
+
+            <!-- Main Area -->
+            <main class="main-area">
+                <!-- Manage Jobs Section -->
+                <div id="manage-jobs" class="section active">
+                    <div class="content-header">
+                        <h1 class="content-title">Manage Jobs</h1>
+                    </div>
+                    <div class="content-area">
+                        <div class="content-card">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Job Title</th>
+                                        <th>Company</th>
+                                        <th>Location</th>
+                                        <th>Posted Date</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="6">
+                                            <div class="empty-state">
+                                                <p>No jobs to manage at this time.</p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Manage Applicants Section -->
+                <div id="manage-applicants" class="section">
+                    <div class="content-header">
+                        <h1 class="content-title">Manage Applicants</h1>
+                    </div>
+                    <div class="content-area">
+                        <div class="content-card">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Applied For</th>
+                                        <th>Application Date</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="6">
+                                            <div class="empty-state">
+                                                <p>No applicants to manage at this time.</p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Manage Companies Section -->
+                <div id="manage-companies" class="section">
+                    <div class="content-header">
+                        <h1 class="content-title">Manage Companies</h1>
+                    </div>
+                    <div class="content-area">
+                        <div class="content-card">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Company Name</th>
+                                        <th>Contact Email</th>
+                                        <th>Jobs Posted</th>
+                                        <th>Registration Date</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="6">
+                                            <div class="empty-state">
+                                                <p>No companies to manage at this time.</p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <li><a href="applicant.html">Internships</a></li>
+    <script src="js/portal.js"></script>
+</body>
+</html>

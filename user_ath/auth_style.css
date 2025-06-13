@@ -1,0 +1,78 @@
+:root{
+    --primary-color: #6c63ff;
+    --secondary-color: #e6e6fa;
+    --accent-color: #ff7f50;
+    --tertiary-color: #ffdb58;
+    --text-color: #252c34;
+}
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    font-size: 16px;
+    background:linear-gradient(to top, var(--primary-color), var(--secondary-color));
+}
+.container{
+    height: 100%;
+    max-width: 1100px;
+    width: 90%;
+    margin: 0 auto;
+}
+/* Registration form */
+.form-container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper{
+    height: auto;
+    width: 400px;
+    background-color: var(--secondary-color); 
+    border-radius: 5px; 
+    box-shadow: 0 2px 4px rgba(0,0,0, 0.2);
+}
+.wrapper .form-header{
+    background-color: var(--primary-color);
+    color: #fff;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px 5px 0 0;
+}
+.wrapper input, button, select{
+    display: block;
+    width: 100%;
+    border: none;
+    outline: none;
+    margin: 1rem 0;
+    font-size: 1rem;
+    padding: 10px 25px;
+    border-radius: 6px;
+    color: var(--text-color);
+}
+.wrapper button{
+    cursor: pointer;
+    color: #fff;
+    background-color: var(--primary-color);
+}.wrapper button:hover{
+    background-color: #9791fe;
+}
+form{
+    padding: 1.5rem;
+}
+form p{
+    color: var(--text-color);
+    text-align: center;
+}
+form a{
+    text-decoration: none;
+    color: var(--accent-color);
+}
+form a:hover{
+    text-decoration: underline;
+}

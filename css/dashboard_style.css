@@ -1,0 +1,209 @@
+:root{
+    --primary-color: #6c63ff;
+    --secondary-color: #e6e6fa;
+    --accent-color: #ff7f50;
+    --tertiary-color: #ffdb58;
+    --text-color: #252c34;
+    --background-color:#1e293b;
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    font-size: 16px;
+    display: flex;
+    flex-wrap: wrap;
+}
+/* Components */
+button{
+    cursor: pointer;
+}
+.btn-internship{
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 12px 24px;
+    border-radius: 4px;
+    border:none;
+}
+textarea{
+    resize: none;
+    outline: none;
+}
+input, textarea{
+    display: inline-block;
+    width: 100%;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0.5rem 1rem ;
+    outline: none;
+}
+input:focus, textarea:focus{
+    border: 1px solid var(--primary-color);
+}
+h3{
+    font-size: clamp(1.3rem, 2vw, 1.6rem);
+    color: var(--text-color);
+}
+label{
+    font-size: 1rem;
+    color: var(--text-color);
+}
+label::after{
+    content: ':';
+}
+.btn-internship:hover{
+    background-color: #443dc4;
+}
+.container{
+    min-height: 100vh;
+    max-width: 1100px;
+    width: 90%;
+    margin: 0 auto;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+span{
+    color: var(--accent-color);
+}
+.active{
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 6px;    
+}
+/* navigation bar */
+nav{
+    background-color: var(--background-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    min-width:250px;
+}
+nav .container{
+    padding: 3rem 0;
+}
+.side-bar .header{
+    text-align: center;
+    color: #fff;
+    font-size: 1.1rem;
+    padding-bottom: 1.3rem;
+    border-bottom:1px solid #585858;
+}
+.side-bar .profile-tag-dashboard{
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 1px solid #585858;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.side-bar .profile-tag-dashboard .img-dashboard-profile{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: white;
+}
+.side-bar .profile-tag-dashboard .name-dashboard-profile{
+    margin: 1rem 0;
+    font-size: 16px;
+}
+.side-bar .profile-tag-dashboard p{
+    color: #ccc;
+}
+#navigation-bar{
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+#navigation-bar li{
+    cursor: pointer;
+}
+#navigation-bar a{
+    display: inline-block;
+    font-size: 1rem;
+    color:#d6cdcd;
+    padding: 12px 25px;
+    width: 100%;
+    border-radius: 6px;
+}
+#navigation-bar li:hover a{
+    background-color: #2e3e5a;
+    color: #fff;
+}
+
+/* Main Content */
+main{
+    flex:1;
+    height: 100vh;
+    width: auto;
+    margin-left: 250px;
+}
+
+.card-content, .header-profile, #dashboard-main-form{
+    padding: 1rem;
+    border-radius: 4px;
+    background-color: #f7f7f7;
+    box-shadow: var(--box-shadow);
+    margin-top: 1rem;
+    color: var(--text-color);
+}
+
+.card-content .header-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    border-bottom: 1px solid  #ccc;
+}
+.card-content .main-content{
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.card-content .main-content .placeholder-text{
+    color: #8b8b8b;
+}
+/* Employer Dashboard */
+.dashboard-form-group{
+    margin-bottom: 12px;
+    line-height: 2;
+}
+.location-duration{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+.location-duration .dashboard-form-group{
+    flex: 1;
+    min-width: 250px;
+}
+
+@media (max-width:768px) {
+    nav{
+        width: 100%;
+        position: absolute;
+    } 
+    main{
+        margin-top: 100vh;
+        margin-left: 0;
+    }
+    main .container{
+        margin: auto;
+    }
+}

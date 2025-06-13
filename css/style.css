@@ -1,0 +1,656 @@
+:root{
+    --primary-color: #6c63ff;
+    --secondary-color: #e6e6fa;
+    --accent-color: #ff7f50;
+    --tertiary-color: #ffdb58;
+    --text-color: #252c34;
+    --background-color:#1e293b;
+}
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+/* Components */
+span{
+    color: #ff7f50;
+}
+.sidebar{
+    display: none;
+}
+svg{
+    width: 24px;
+    cursor: pointer;
+}
+#x-icon{
+    display: none;
+}
+.active-page{
+    color: var(--accent-color);
+}
+.lead-text{
+    margin: 1.5rem 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+}
+.btn{
+    padding: 0.5rem 0.7rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.primary{
+    background-color: var(--accent-color);
+    color: white;
+}
+.primary:hover{
+    background-color: var(--tertiary-color);
+}
+.secondary{
+    margin-right: 0.5rem;
+    background-color: #cfcccc;
+    color: var(--text-color);
+}
+.secondary:hover{
+    background-color: #e0dfdf;
+}
+.call-action{
+    background: transparent;
+    color: black;
+    border: none;
+}
+.container{
+    height: 100%;
+    max-width: 1100px;
+    width: 90%;
+    margin: 0 auto;
+}
+h5{
+    color: var(--tertiary-color);
+    font-size: clamp( 1rem, 2vw,2.5rem);
+}
+#bar-icon{
+    display: none;
+}
+/* navigation Bar */
+
+nav{
+    height: 60px;
+    background-color: var(--primary-color);
+    border-bottom: 2px solid var(--tertiary-color);
+}
+nav .container{
+    display: flex;
+    align-items: center;
+}
+nav .container .logo{
+    flex:1.5;
+    color: #fff;
+}
+nav .container #links{
+    flex: 1.5 ;
+    display: flex;
+    gap: 1rem;
+}
+nav .container #links li{
+    flex-shrink: 0;
+}
+
+nav .container #links a:hover{
+    color: var(--accent-color);
+}
+nav .container #btns{
+    justify-self: flex-end;
+}
+
+/* main section */
+#main-hero{
+
+    height: max-content;
+    background-color: var(--primary-color);
+}
+#main-hero .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    background-color: var(--primary-color);
+    gap: 10px;
+}
+#main-hero .container .content{
+    align-self: center;
+    padding-right: 2rem;
+}
+#main-hero .container .content p{
+    line-height: 1.7;
+}
+#main-hero .container .image{
+    background: url(../assets/heroImage.webp) no-repeat center center /cover;
+    height: 450px;
+}
+#main-hero .container .content #btns{
+    display: none;
+}
+/* Section-1 */
+#section-1{
+    /* height: 550px; */
+    height: max-content;
+    background-color: var(--secondary-color);
+}
+
+#section-1 .container {
+    padding: 3rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: max-content max-content ;
+}
+
+#section-1 .container .header{
+    grid-column: 1/4;
+    grid-row: 1;
+    justify-self: center;
+    text-align: center;
+    max-width: 500px;
+}
+
+#section-1 .container #cards{
+    grid-column: 1/4;
+    grid-row: 2;
+}
+
+#section-1 .container #cards{
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+#section-1 .container #cards li{
+    min-width: 250px;
+    flex: 1;
+}
+#section-1 .container  #cards .card-img{
+    justify-self: center;
+    height: 150px;
+    width: 200px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+#section-1 .container  #cards .card-img img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+#section-1 .container #cards .sub-header{
+    margin: 1rem;
+}
+#section-1 .container #cards .lead-text{
+    margin: 0;
+}
+/* Testimonial  */
+#testimonial{
+    min-height: 200px;
+    color: var(--text-color);
+}
+#testimonial .container{
+    padding: 3rem 0;
+}
+
+#testimonial h3{
+    text-align: center;
+}
+#testimonial h3::before{
+    content: open-quote;
+}
+#testimonial h3::after{
+    content: close-quote;
+}
+#testimonial .wrapper-testimonial{
+    display: flex;
+    flex-wrap: wrap;
+}
+#testimonial .testimonial-profile{
+    min-width: 200px;
+    height: 150px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#testimonial small{
+    color: #b0afaf;
+    font-size: smaller;
+}
+#testimonial .testimonial-profile .testimonial-profile-img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 12px;
+    border: 3px solid lightgreen;
+}
+#testimonial .testimonial-profile .testimonial-profile-img img{
+    object-fit: cover;
+    object-position: center;
+}
+/* CTA  */
+#call-to-action{
+    min-height: 200px;
+    color: var(--text-color);
+}
+#call-to-action .container{
+    padding: 3rem 0;
+    text-align: center;
+}
+
+#call-to-action .call-to-action-btns{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    min-width: 250px;
+}
+/* FAQ */
+#Faq{
+    height: 450px;
+    background-color: var(--primary-color);
+}
+#Faq .container{
+    padding: 3rem 0;
+    max-width: 600px;
+}
+#Faq .Faq-header{
+    text-align: center;
+}
+#Faq .Faq-header h1{
+    font-size: 2rem;
+}
+#Faq .Faq-header p{
+    margin: 1rem 0;
+}
+#Faq label{
+    font-weight: bold;
+    font-size: 1rem;
+}
+#Faq .wrapper{
+    border-bottom: 1px solid black;
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 500ms;
+    cursor: pointer;
+    padding: 0.4rem 0;
+    margin-bottom: 8px;
+}
+#Faq .wrapper:hover{
+    grid-template-rows: 1fr;
+}
+#Faq .accordion{
+    margin: .5rem 0;
+    overflow: hidden;
+}
+
+/* footer */
+#upper-footer{
+    padding: 3rem 0;
+    height: auto;
+    background-color: var(--background-color);
+    color: #ccc;
+}
+#footer-columns{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+#footer-columns li{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#footer-columns li .icons{
+    display: flex;
+    gap: 10px;
+}
+#footer-columns li .icons svg{
+    fill: #fff;
+}
+#footer{
+    height: 40px;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#footer p{
+    text-align: center;
+}
+
+/* Contact Us Page */
+#contact-us{
+    text-align: center;
+    height: auto;
+    padding: 40px 0;
+}
+#contact-us .container{
+    max-width: 550px;
+    text-align: center;
+}
+#contact-us .container h1{
+    font-size: clamp(1.5rem, 5vw, 2.1rem);
+}
+#contact-us .container p{
+    line-height: 1.3;
+}
+#contact-details{
+    background: var(--secondary-color);
+    padding: 3rem 0;
+}
+#contact-details a{
+    color: #2b2bfc;
+}
+#contact-details h5{
+    color: var(--text-color);
+    font-size: 1.1rem;
+}
+#contact-details h3{
+    font-size: 1.4rem;
+}
+#contact-details svg{
+    fill: var(--accent-color);
+}
+#contact-details svg:hover{
+    fill: var(--text-color);
+    transform: scale(1.1);
+}
+#contact-details .container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+
+}
+#contact-details .container .contact-content, #contact-details .container .contact-form{
+    flex: 1;
+    min-width: 250px;
+}
+#contact-details #contact-location{
+    margin: 12px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+#contact-details .follow-us .icons{
+    display: flex;
+    gap: 20px;
+    margin-top: 12px;
+}
+#contact-details .follow-us{
+    border-top: 1px solid #ccc;
+}
+/* Form contact */
+
+.contact-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-form input, .contact-form button{
+    display: block;
+    outline: none;
+    border: none;
+    font-size: clamp( 1rem,2vw,1.1rem);
+    padding: 8px;
+    border-radius:2px;
+}
+.contact-form button{
+    cursor: pointer;
+}
+.contact-form textarea{
+    resize: none;
+    padding: 12px;
+    border-radius: 4px;
+}
+.contact-form textarea:placeholder-shown{
+    font-size: clamp( 1.1rem,2vw,1.2rem);
+}
+.form-container{
+    width: 250px;
+    aspect-ratio: 1;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+.form-container form{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.form-container h3{
+    text-align: center;
+}
+/* Internship Page */
+img{
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: auto;
+    background-position: center;
+}
+/* header */
+#internship{
+    height: auto;
+}
+#internship .container{
+    padding: 2rem 0;
+    text-align: center;
+}
+/* Search */
+#search-input{
+    height: auto;
+}
+#search-input .container{
+    padding: 1rem 0;
+}
+#search-input .search-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    background-color: #e2e1e1;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2) ;
+    padding: 20px;
+}
+#search-input .search-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+
+}
+#search-input .search-wrapper input,
+#search-input .search-wrapper select,
+#search-input .search-wrapper button{
+    font-size: 0.9rem;
+    padding: 6px 14px;
+    outline: none;
+}
+#search-input .search-wrapper button{
+    background-color: #6c63ff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+/* Internship */
+#internship-section{
+    height: auto;
+}
+#internship-section .container{
+    padding: 2rem 0;
+}
+#internship-section .container h3{
+    margin: 10px 0;
+}
+#internship-section #internship-cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 10px;
+}
+#internship-section #internship-cards .internship-card{
+    width: 250px;
+    height: 250px;
+    border-radius: 6px;
+    background-color: #e2e1e1;
+    padding: 12px;
+    justify-self: center;
+}
+#internship-section #internship-cards .internship-card .internship-img{
+    height: 140px;
+}
+#internship-section #internship-cards .internship-card a{
+    color: #2b2bfc;
+    margin-top: 1rem;
+}
+#internship-section #internship-cards .internship-card p{
+    margin: 4px 0;
+    font-weight: bold;
+}
+#internship-section #internship-cards .internship-card small{
+    color: darkgray;
+    margin-bottom: 4px;
+}
+
+/* About Page */
+#about-us{
+    height: auto;
+}
+#about-us .container{
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 3rem 0;
+}
+#about-us .img-about{
+
+    background: url(../assets/pexels-keira-burton-6146970.jpg) no-repeat center center /cover;
+}
+#about-us .img-about, #about-us .contact{
+    flex: 1;
+    min-width: 250px;
+    min-height:250px ;
+}
+#about-us .contact h1{
+    font-size: clamp(1.1rem, 5vw, 2rem);
+    margin-bottom: 1rem;
+}
+#about-us .contact h3{
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    margin-top: 8px;
+}
+#about-us .contact p{
+    line-height: 1.5;
+}
+/* Handling the responsiveness of the website */
+@media(max-width:768px){
+
+    /* navigation bar */
+    #x-icon{
+        display: block;
+    }
+    #bar-icon{
+        display: block;
+    }
+    nav .container{
+        display: flex;
+        justify-content: space-between;
+    }
+    nav #bar-icon{
+        flex-shrink: 0;
+    }
+
+    nav li ,nav #btns{
+        display: none;
+
+    }
+    header .sidebar{
+        position: fixed;
+        width: 250px;
+        background-color:var(--secondary-color);
+        height: 100vh;
+        top: 0;
+        right: -100%;
+        color: var(--tertiary-color);
+        z-index: 10;
+        padding: 1.4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        transition: right 0.7s ease, transform 0.1s ease;
+
+    }
+    header li:first-child{
+        align-self: flex-end;
+        margin-bottom: 3rem;
+    }
+    header li a{
+        display: block;
+        font-size: 1.5rem;
+        padding: 8px;
+        border-bottom: 1px solid var(--accent-color);
+        color: var(--text-color);
+    }
+    header li a:hover{
+        background-color: var(--primary-color);
+        color: #fff;
+    }
+    #main-hero .container .content{
+        padding: 1rem;
+        text-align: center;
+    }
+    #main-hero .container .content h1{
+        font-size: 1.8rem;
+    }
+    #main-hero .container .content p{
+        line-height: 1.2;
+    }
+    #main-hero .container .content #btns{
+        display: block;
+    }
+    /* Call to section section */
+    #call-to-action .call-to-action-btns{
+        gap: 1rem;
+    }
+    /* Internship Page */
+    #internship-section .container h3{
+        text-align: center;
+    }
+    /* contact form */
+    .contact-form{
+        justify-content: flex-start;
+    }
+    /* overlay */
+    body{
+        position: relative;
+    }
+    #overlay.open{
+        background-color: rgba(0, 0, 0, .6);;
+        position: fixed;
+        inset: 0;
+        z-index: 5;
+    }
+}
