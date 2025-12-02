@@ -6,6 +6,8 @@
   --tertiary-color: hsl(243, 100%, 70%);
   --text-color: #252c34
   --background-color: #1e293b;
+  --svg-color:hsl(243, 100%, 95%);
+  --svg-color-x:hsl(243, 100%, 70%);
 }
 
 * {
@@ -582,9 +584,12 @@ img {
 }
   #x-icon {
     display: block;
+    fill: var(--svg-color-x);
+    aspect-ratio: 1/1;
   }
   #bar-icon {
     display: block;
+    fill: var(--svg-color);
   }
   nav .container {
     display: flex;
